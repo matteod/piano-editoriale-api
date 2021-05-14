@@ -21,8 +21,6 @@ class UsersSeeder extends Seeder
         $user->email = 'admin@admin.it';
         $user->password = Hash::make('password');
         $user->save();
-        // -> get() ritorna sempre una collection
-        // ->first() ritorna il primo oggetto corrispondente
 
         $user->roles()->attach(Role::where('key',Role::ROLE_ADMIN)->first());
 

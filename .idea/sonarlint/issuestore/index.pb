@@ -5,8 +5,6 @@ V
 &app/Http/Middleware/EncryptCookies.php,d/1/d1c845bb53088a07a617eb722a5d18a081064976
 h
 8app/Http/Middleware/PreventRequestsDuringMaintenance.php,4/0/40bb6080aab34a118d4923712bdd9f0cc53d89a6
-_
-/app/Http/Middleware/RedirectIfAuthenticated.php,4/0/40d54a318fd625143db9d72eb6edc2d5c100b557
 S
 #app/Http/Middleware/TrimStrings.php,5/8/58688ed0cc90f74fadfaaad4bebd416689c8ea2f
 R
@@ -25,3 +23,21 @@ Mdatabase/migrations/2019_12_14_000001_create_personal_access_tokens_table.php,
 composer.json,3/9/3957b91a0d8450cea0115cfd5af69eac90d75897
 =
 composer.lock,c/3/c3262e2a0879195bd6a727e90f768bc85ad79ffd
+V
+&app/Http/Requests/UserStoreRequest.php,0/c/0c3cfd74391b88edb9b8e0d5cd2eaee0a467dec3
+X
+(app/Http/Resources/UserIndexResource.php,a/4/a444d0dabd4d00c4532ef2e47721f57c4ddb802e
+<
+.env.example,d/4/d4dae00d11854b35292c2b8a30515a9a0aa2d871
+B
+docker-compose.yml,3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a
+P
+ database/seeders/RolesSeeder.php,1/b/1b097295215a16cf305d6e0dbaae68054c42554b
+@
+public/index.php,0/e/0e61f67641b441bb3ee38e903c594d99cafa14b4
+C
+app/Http/Kernel.php,4/0/405f423e61f666bcedb754ae8befdce9e746176e
+4
+.env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+_
+/app/Http/Middleware/RedirectIfAuthenticated.php,4/0/40d54a318fd625143db9d72eb6edc2d5c100b557

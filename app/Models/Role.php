@@ -10,6 +10,10 @@ class Role extends Model
 {
     use HasFactory;
 
+    /************************************************************************************
+     * CONSTANTS
+     */
+
     CONST ROLE_EDITORIAL_DESIGN_MANAGER = 'editorial-design-managers';
     CONST ROLE_EDITORIAL_RESPONSIBLE = 'editorial-responsible';
     CONST ROLE_EDITORIAL_DIRECTOR = 'editorial-director';
@@ -24,7 +28,15 @@ class Role extends Model
      */
     protected $table = 'roles';
 
+    /************************************************************************************
+     * RELATIONS
+     */
 
+    /**
+     * Get related users
+     *
+     * @return BelongsToMany
+     */
     public function users(): BelongsToMany
     {
         return $this->belongsToMany(User::class,'user_role');

@@ -34,6 +34,7 @@ class CreateBasicTables extends Migration
             $table->string('name');
             $table->string('key')->unique();
             $table->string('description')->nullable();
+            $table->timestamps();
         });
 
         Schema::create('editorial_projects',function (Blueprint $table){
@@ -57,10 +58,10 @@ class CreateBasicTables extends Migration
 
         Schema::create('editorial_project_logs',function (Blueprint $table){
             $table->id();
-            $table->unsignedBigInteger('editorial_project_id');
+            $table->unsignedBigInteger('editorial_project_id'); // Unsigned = non può essere negativo
             $table->unsignedBigInteger('user_id');
-            $table->enum('action',['CREATE','UPDATE','DESTROY']);
-            $table->dateTimeTz('created_at')->default(Carbon::now());
+            $table->enum('action',['CREATE','UPDATE','DESTROY']); // Enum = enumeratore -> può avere solo tot valori prestabiliti
+            $table->dateTimeTz('created_at')->default(Carbon::now()); // dateTimeTz giorno + orario + timezone
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('editorial_project_id')->references('id')->on('editorial_projects')->onDelete('cascade');
         });
